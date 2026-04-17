@@ -1,0 +1,75 @@
+ Algoritmo #1:
+
+- Tomar dispositivo.
+- Desbloquear dispositivo.
+- Abrir aplicación YouTube.
+- Buscar el video deseado.
+- Seleccionar el video.
+- Ver el video.
+
+Algoritmo #2:
+
+- Despertar
+- Mientras sea día laboral: 
+	- Levantarme
+	- Alistar cosas para bañarme
+	- Bañarme
+	- Mudarme
+	- Ponerme zapatos
+	- Peinarme
+	- Echarme perfume y desodorante
+	- Desayunar 
+	- Ir al trabajo
+	- Trabajar hasta medio día
+	- Almorzar 
+	- Trabajar hasta hora de salida.
+        - Regresar a casa
+
+	- Si ese día hay clases:
+	     	- Recibir clases.
+		- Cocinar
+	     	- Cenar
+	     	- Cepillarme los dientes
+	     	- Dormir
+	- Si no 
+		- Si hay tareas, hacer tareas.
+		- Acomodar la casa.
+		- Cocinar
+		- Cenar.
+		- Cepillarme los dientes. 
+		- Dormir. 	     
+- Levantarme tarde.
+- Bañarme.
+- Mudarme.
+- Peinarme.
+- Desayunar
+- Ponerme zapatos
+   -Si el día esta soleado:
+        - Salir de casa.
+        - Ir al parque.
+        - Visitar a mi madre.
+        - Almorzar
+        - Regresar a casa.
+        - Encender la televisión. 
+        - Abrir Netflix. 
+        - Buscar una película. 
+        - Ver la película.
+        - Apagar la televisión. 
+        - Si quiero cocinar: 
+            - Cocinar.
+        - Si no, 
+            - Pedir delivery.
+        - Cepillarme los dientes
+        - Dormir. 
+
+   - Sino, quedarme en casa.
+   - Encender la televisión. 
+   - Abrir Netflix. 
+   - Buscar una película. 
+   - Ver la película.
+   - Apagar la televisión.
+   - Cocinar.
+   - Cenar.
+   - Cepillarme los dientes. 
+   - Dormir.
+- Fin.
