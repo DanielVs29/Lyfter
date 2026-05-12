@@ -1,0 +1,96 @@
+Ejercicio #1
+
+Inicio
+
+Definir precio
+Definir descuento
+
+Mostrar "Ingrese el precio del producto: "
+
+Pedir precio
+
+Si ( precio < 100)
+
+    descuento = precio * 0.02
+
+Sino:
+
+    descuento = precio * 0.10
+
+FinSi.
+
+Mostrar "El precio final del producto es: " + (precio - descuento)
+
+Fin
+
+
+
+Ejercicio #2
+
+
+Inicio
+
+Definir segundos
+Definir restante
+
+Mostrar "Ingrese su tiempo en segundos"
+
+Pedir segundos
+
+Si (segundos == 600)
+
+    Mostrar "Igual"
+
+Sino:
+
+     Si (segundos > 600)
+
+         Mostrar "Mayor"
+
+     Sino:
+
+         restante = 600 - segundos
+
+         Mostrar restante
+
+     FinSi
+
+FinSi
+
+Fin
+
+
+
+Ejercicio #3
+
+
+Inicio
+
+Definir numero
+Definir contador
+Definir suma
+
+Mostrar "Ingrese el numero"
+
+Pedir numero
+
+contador = 1
+suma = 0
+
+Mientras que (contador <= numero) hacer:
+
+	suma = suma + contador
+	contador = contador + 1
+
+FinMientras
+
+Mostrar "La suma es de: " + suma
+
+Fin
+
+
+
+
+
+
+

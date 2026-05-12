@@ -1,0 +1,7 @@
+print ("Hola Hola")
+print ("La suma de '5 + 5' es de: ", 5+5 )
+print (5+5)
+print ("Mi edad es: ")
+print (8*3)
+print ("Estamos en el año")
+print (2026000 // 1000)
