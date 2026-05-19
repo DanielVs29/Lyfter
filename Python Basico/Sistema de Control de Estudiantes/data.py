@@ -1,6 +1,11 @@
 import csv
 
 def save_students_csv(file_path, students):
+
+    if not students:
+        print("No students to save.\n")
+        return
+
     with open(file_path, 'w', encoding='utf-8', newline='') as file:
         headers = students[0].keys()
         writer = csv.DictWriter(file, fieldnames=headers)

@@ -1,7 +1,8 @@
 def add_students(students):
+
     while True:
 
-        student = {
+        new_student = {
             "name": valid_name(),
             "section": valid_section(),
             "spanish_grade": valid_grade("Spanish"),
@@ -9,10 +10,27 @@ def add_students(students):
             "science_grade": valid_grade("Science"),
             "socials_grade": valid_grade("Socials")
         }
-        students.append(student)
-        print("Student added successfully.")
+
+        exists = False
+
+        for student in students:
+
+            if (
+                student['name'].lower() == new_student['name'].lower()
+                and
+                student['section'].lower() == new_student['section'].lower()
+            ):
+
+                print(f"\nError: Student {new_student['name']} already exists.\n")
+                exists = True
+                break
+
+        if not exists:
+            students.append(new_student)
+            print("Student added successfully.\n")
 
         new = input("Do you want to add another student? (yes/no): ").lower()
+
         if new != "yes":
             break
 
@@ -23,6 +41,7 @@ def show_students(students):
         return
 
     for student in students:
+        print("---------------------------------------------")
         print(f"Name: {student['name']}")
         print(f"Section: {student['section']}")
         print(f"Spanish Grade: {student['spanish_grade']}")
@@ -50,7 +69,7 @@ def top3_average(students):
         print(f"Name: {student['name']} - Average Grade: {student['average']}")
 
 
-def grade_average(students):
+def all_students_average(students):
     if not students:
         print("No students to calculate averages.\n")
         return
@@ -58,7 +77,16 @@ def grade_average(students):
     for student in students:
         average = (student['spanish_grade'] + student['english_grade'] +
                    student['science_grade'] + student['socials_grade']) / 4
-        print(f"Name: {student['name']} - Average Grade: {average}")
+        student['average'] = average
+
+    total_average = 0
+
+    for student in students:
+        total_average += student['average']
+
+    print("---------------------------------------------")
+    print(f"Average grade of all students: {total_average / len(students)}")
+    print("---------------------------------------------")
 
 
 def delete_student(students):
@@ -82,38 +110,44 @@ def delete_student(students):
 def failed_students(students):
 
     if not students:
-
         print("No students found.\n")
         return
 
-    print("Failed Students:")
+    found_failed = False
 
     for student in students:
+
         failed_subjects = []
 
         if student['spanish_grade'] < 60:
-            failed_subjects.append( f"Spanish: {student['spanish_grade']}")
+            failed_subjects.append(f"Spanish: {student['spanish_grade']}")
 
         if student['english_grade'] < 60:
-            failed_subjects.append( f"English: {student['english_grade']}")
+            failed_subjects.append(f"English: {student['english_grade']}")
 
         if student['science_grade'] < 60:
-            failed_subjects.append( f"Science: {student['science_grade']}")
+            failed_subjects.append(f"Science: {student['science_grade']}")
 
         if student['socials_grade'] < 60:
-            failed_subjects.append( f"Socials: {student['socials_grade']}")
+            failed_subjects.append(f"Socials: {student['socials_grade']}")
 
         if failed_subjects:
+
+            if not found_failed:
+                print("Failed Students:\n")
+
+            found_failed = True
 
             print(f"Name: {student['name']} - Section: {student['section']}")
             print("Failed Subjects:")
 
             for subject in failed_subjects:
-
                 print(f"  {subject}")
 
             print("---------------------------------------------")
 
+    if not found_failed:
+        print("There are no failed students.\n")
 
 def valid_grade(subject):
 

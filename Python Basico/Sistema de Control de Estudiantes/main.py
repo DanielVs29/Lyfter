@@ -1,5 +1,10 @@
 from menu import start_menu
 
-students = []
+def main():
 
-start_menu(students)
+    students = []
+
+    start_menu(students)
+
+
+if __name__ == "__main__": main()

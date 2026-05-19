@@ -1,4 +1,4 @@
-from actions import add_students, show_students, top3_average, grade_average, delete_student, failed_students
+from actions import add_students, show_students, top3_average, all_students_average, delete_student, failed_students
 from data import save_students_csv, load_students_csv
 
 def start_menu(students):
@@ -30,7 +30,7 @@ def start_menu(students):
             top3_average(students)
 
         elif option == "4":
-            grade_average(students)
+            all_students_average(students)
 
         elif option == "5":
             save_students_csv("students.csv", students)
