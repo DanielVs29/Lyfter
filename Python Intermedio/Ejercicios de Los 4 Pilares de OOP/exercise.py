@@ -1,6 +1,6 @@
-
 class BankAccount:
-    balance = 0
+    def __init__(self, initial_balance=0):
+        self.balance = initial_balance
 
     def add_balance(self, amount):
         self.balance += amount
@@ -11,9 +11,10 @@ class BankAccount:
             self.balance -= amount
             return self.balance
 
-class SavingsAccount(BankAccount):
 
-    def __init__(self, min_balance):    
+class SavingsAccount(BankAccount):
+    def __init__(self, min_balance, initial_balance=0):
+        super().__init__(initial_balance)
         self.min_balance = min_balance
 
     def substract_balance(self, amount):
@@ -24,13 +25,12 @@ class SavingsAccount(BankAccount):
             raise ValueError("Balance cannot go below minimum balance")
 
 
-
-cuenta = SavingsAccount(100)
-
+cuenta = SavingsAccount(min_balance=100)
 cuenta.add_balance(500)
 
+
 try:
-    print(cuenta.substract_balance(300))
+    print(cuenta.substract_balance(300)) 
 except ValueError as error:
     print(error)
 
@@ -38,4 +38,3 @@ try:
     print(cuenta.substract_balance(150))
 except ValueError as error:
     print(error)
-
